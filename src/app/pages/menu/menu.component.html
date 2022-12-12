@@ -1,0 +1,26 @@
+<div class="container mt-6 mb-6">
+
+    <div class="row">
+
+        <div class="col-lg-4" *ngFor="let sr of servicedata">
+        
+
+<div class="servicebox mt-3 mb-4">
+    
+
+    <img src="{{sr.serviceImg}}">
+    <h1>{{sr.serviceName}}</h1>
+    <p>{{sr.serviceType}}</p>
+    <p>{{sr.gasswaranty}}</p>
+    <p>{{sr.servicePrice |currency:'INR'}}</p>
+    <br/>
+    <a class="buybtn" [routerLink]="['/menu',sr.id]">Book Now &nbsp;<i class="bi bi-bag"></i></a>
+
+
+</div>
+
+        </div>
+
+    </div>
+
+</div>

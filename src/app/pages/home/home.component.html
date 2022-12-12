@@ -1,0 +1,55 @@
+<div class="banner">
+    <div class="content">
+        <h1 class="mb-5">Best Quality Product <br> Now At Your Door</h1>
+        <a routerLink="manu">Book Service Now<i class="bi bi-arrow-right-circle"></i> </a>
+    </div>
+</div>
+<div class="container mt-5 mb-4">
+    <h1 class="text-center">How to order <span class="highlight"> Your Service </span></h1>
+    <div class="row mt-5">
+
+        <!-- one -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>1</h1>
+                <p>select Service</p>
+            </div>
+        </div>
+
+        <!-- two -->
+
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>2</h1>
+                <p>fill the details</p>
+            </div>
+
+        </div>
+
+        <!-- three -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>3</h1>
+                <p>Technition ariveed with in 24 hours</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Service -->
+<div class="container mt-4 mb-4">
+    <h1 class="text-center">Customers <span class="highlight"> Favourites Service </span></h1>
+    <div class="row">
+        <div class="col-md-6 mt-3" *ngFor="let sr of serviceData;index as i">
+            <div class="servicebox" *ngIf="i<=1">
+                <img src="{{sr.serviceImg}}" />
+                <h1>{{sr.serviceName}}</h1>
+                <p>{{sr.servicePrice | currency:"INR"}}</p>
+            </div>
+
+        </div>
+    </div>
+    <a routerLink="menu" class="viewmorebtn" >view more <i class="bi bi-arrow-right-circle"></i></a>
+    
+</div>
